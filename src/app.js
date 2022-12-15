@@ -1,9 +1,9 @@
-import { useState } from '../@react/hook.js';
-import { render } from '../@react/render.js';
+import { useEffect, useState } from '../@react/hook.js';
+import { render } from '../@react/dom.js';
 
 function App() {
-  const a = useState();
+  const [state, setState] = useState('test');
 
-  return render(`<div>test</div>`);
+  return render(`<div>${state}</div>`);
 }
 export default App;
